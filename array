@@ -1,0 +1,20 @@
+def evenodd(arr,n):
+    i=0
+    temp=0
+    j=1
+    while(j<=n-1):
+        if arr[j]%2==0:
+            temp=arr[i]
+            arr[i]=arr[j]
+            arr[j]=temp
+            j+=1
+            i+=1
+        else:
+            j+=1
+    return arr
+if __name__=='__main__':
+    arr=list(map(int,input().split(",")))
+    n=len(arr)
+    ans=evenodd(arr,n)
+    print(ans)
+        
